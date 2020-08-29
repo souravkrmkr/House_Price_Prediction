@@ -39,4 +39,29 @@ Exploratory Data Analysis:
     
 Data Preparation:
 
+    For continuous variables, the variables with missing values are identified. As the number of missing values are not much, we
+    impute these missing values with mean.
+    For the categorical variables, we first identify the variables with meaningful missing values and impute them accordingly.
+    Some of the categorical variables contain more number of categories. So, we use bucketing to handle this situation.
+    Then, we dummify the categorical variables and drop the original categorical variables.
+    We derive some age variables from date variables present in the dataset.
+    The target variable is transformed using log transformation to a normally distributed variable.
     
+Model Building:
+
+    Data is split into X and y variables.
+    Data is split into train and test set.
+    Continuous variables from X set are standardized.
+    RFE is used to select top 50 variables.
+    GridSearchCV is used for hyperparameter tuning to find the best set of parameters.
+    The model is used to predict on the test set. 
+    The R-squared is used to evaluate the model.
+    
+
+Since, alpha or lambda is the coefficient of the regularization part of the cost function, and our aim in any model is to reduce the value of the cost function, we always choose the model for which the value of alpha/lambda is less. For a good model, the value of alpha tends to zero. The best model’s cost function is equipped with only the error term because in that case the value of alpha/lambda becomes zero.
+
+Here, in this case, in case of Ridge regression, the optimum value of alpha is 5.0. Whereas the optimum value of alpha for Lasso regression is 0.00005. It is clearly shown that for Lasso, the optimum value of alpha is much lesser than that of Ridge.
+
+Hence, in case of Lasso regression, the value of regularization term in the cost function will be lesser than that of Ridge regression. And so, cost function will be lesser for Lasso regression compared to Ridge regression.
+
+Hence, we choose Lasso regression over Ridge regression.
