@@ -23,10 +23,9 @@ Data Collection:
   
 Data Cleaning:
 
-    As part of Data Cleaning process, first, presence of null values have been identified and variables with very high 
-    percentage of nulls are dropped since these variables are going to contribute much towards the analysis for prediction. 
-    Now, the skewness for the categorical variables have been checked. The variables for which data is highly skewed are
-    identified and dropped. With these two steps of data cleaning, the data looks cleaned and no further cleaning is required.
+    As part of Data Cleaning process, the skewness for the categorical variables have been checked. The variables for which 
+    data is highly skewed are identified and dropped. With these two steps of data cleaning, the data looks cleaned and no 
+    further cleaning is required.
     
 Exploratory Data Analysis:
 
